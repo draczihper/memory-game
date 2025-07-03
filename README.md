@@ -72,7 +72,7 @@ memory-game/
    ```bash
    git clone https://github.com/yourusername/memory-game.git
    cd memory-game
-````
+```
 
 2. **Install dependencies**
 
