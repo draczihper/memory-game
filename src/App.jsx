@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import { shuffleArray } from "./utils/shuffle";
 import ImageGrid from "./components/ImageGrid";
-
+import ScoreBoard from "./components/ScoreBoard";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true)
   const [characters, setCharacters] = useState([]);
-  const [clickedIds, setClickedIds] = useState([]);
+  const [clickedNames, setClickedNames] = useState([]);
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
@@ -30,17 +31,42 @@ function App() {
       setCharacters(shuffleArray(results))
       } catch {
         console.error(error)
+      } finally {
+        setIsLoading(false);
       }
     }
     fetchData();
 
   }, [])
 
+  const handleCardClick = (name) => {
+        if (clickedNames.includes(name)){
+          setScore(0);
+          setClickedNames([]);
+        } else {
+          const newScore = score + 1;
+          const newClicked = [...clickedNames, name]
+          setScore(newScore);
+          setBestScore(prev => Math.max(prev, newScore));
+          setClickedNames(newClicked)
+        }
+        setCharacters(prev => shuffleArray(prev))
+  }
+
+  if(isLoading){
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <p className="text-xl text-gray-700  animate-pulse">Loading Pokemon...</p>
+      </div>
+    )
+  }
+
 
   return (
     <>
-      <div>
-        <ImageGrid characters={characters} />
+      <div className="">
+        <ScoreBoard score={score} bestScore={bestScore} />
+        <ImageGrid characters={characters} onCardClick={handleCardClick}/>
       </div>
     </>
   )
