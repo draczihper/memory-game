@@ -6,8 +6,8 @@ A fun and responsive memory game built using **React**, **Vite**, and **Tailwind
 
 ## 🚀 Live Demo
 
-🔗 [View Live Game](https://your-live-link.netlify.app)  
-🔗 [GitHub Repo](https://github.com/yourusername/memory-game)
+🔗 [View Live Game](https://memory-game-7ex.pages.dev/)  
+🔗 [GitHub Repo](https://github.com/draczihper/memory-game)
 
 
 ---
