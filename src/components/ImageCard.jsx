@@ -1,7 +1,7 @@
 function ImageCard({character, onClick}){
     return (
         <div 
-        className="bg-white rounded-xl shadow-lg hover:scale-105 transition-transform duration-200 cursor-pointer max-w-36"
+        className="bg-white rounded-xl shadow-lg hover:scale-105 transition-transform duration-200 cursor-pointer max-w-36 my-1"
         onClick={onClick}
         >
             <img 
