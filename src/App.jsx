@@ -64,7 +64,7 @@ function App() {
 
   return (
     <>
-      <div className="">
+      <div className="min-h-screen bg-gray-100 p-6 flex flex-col items-center">
         <ScoreBoard score={score} bestScore={bestScore} />
         <ImageGrid characters={characters} onCardClick={handleCardClick}/>
       </div>
