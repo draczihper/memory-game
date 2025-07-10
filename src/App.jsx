@@ -64,7 +64,7 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-100 p-6 flex flex-col items-center m-auto">
+      <div className="min-h-screen bg-gray-100 p-6 flex flex-col items-center ">
         <div className="text-center max-w-2xl mb-8">
         <h1 className="text-3xl font-bold mb-2 text-gray-800">Pokémon Memory Game</h1>
         <p className="text-gray-700 text-base">
