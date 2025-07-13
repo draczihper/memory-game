@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-      const names = ['pikachu', 'charizard', 'mew', 'eevee', 'bulbasaur', 'gengar', 'blastoise', 'charmander', 'butterfree', 'tyranitar', 'arcanine', 'greninja'];
+      const names = ['pikachu', 'charizard', 'mewto', 'eevee', 'bulbasaur', 'gengar', 'blastoise', 'charmander', 'butterfree', 'tyranitar', 'arcanine', 'greninja'];
       const results = await Promise.all(
         names.map(async name => {
           try {
